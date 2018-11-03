@@ -1,0 +1,9 @@
+.btn {
+  font-size: 13px;
+  font-family: 'Ubuntu';
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: red; }
