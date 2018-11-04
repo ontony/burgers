@@ -1,73 +1,172 @@
+.review-page {
+  background: $black;
+}
+
+
+
+
+
 .review__list {
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
-
-
-
-
 .review__item {
   width: 25%;
   height: 50%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
 
-  a {
-    text-decoration: none;
-    color: #ffffff;
-    width: 100%;
-    height: 100%;
+  &:hover {
+    .review__hover {
+      opacity: 1;
+    }
   }
 }
 
-.review_hide{
-  opacity: 0.2;
-}
+.review__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($black, .7);
+  opacity: 0;
+  transition: opacity .3s;
 
-.hide-link:hover .review_hide{
-  opacity: 0.9;
-}
+  color: $white;
 
-.review {
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  padding: 50px 20px;
-  padding-right: 30px;
+  padding-top: 16%;
+  padding-bottom: 16%;
+  padding-left: 8%;
+  padding-right: 12%;
 
-
-  h6 {
+  .review__title {
     font-family: 'Gagalin';
     font-size: 14px;
     line-height: 2;
-    text-transform: uppercase;
+    margin-bottom: 8%;
   }
 
-  p {
-
+  .review__text {
     font-family: 'Ubuntu';
     font-size: 14px;
-    font-weight: 300;
+    font-weight: lighter;
     line-height: 1.71;
+    margin-bottom: 5%;
   }
-
-  .review_link {
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: #2f3234;
-    border: none;
-    text-decoration: none;
-
-    font-size: 13px;
-    font-weight: 500;
-
-    line-height: 2.31;
-    text-transform: uppercase;
-
-    &:hover {
-      background-color: #1f2122;
-    }
-
-  }
-
 }
+
+.review__btn:hover {
+  background: #2f3234;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .review__list {
+//   display: flex;
+//   flex-wrap: wrap;
+//   height: 100%;
+// }
+
+
+// .review__item {
+//   width: 25%;
+//   height: 50%;
+
+//   background: url('../../IMG-from-maket/review/item_1.jpg') center center / cover no-repeat;
+
+//   position: relative;
+// }
+
+
+
+
+// .review__hover-block{
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background: rgba(#000, 0.5);
+//   opacity: 0;
+// }
+
+// .review__item:hover .review__hover-block{
+//     opacity: 1;}
+
+
+
+
+
+
+
+
+
+
+
+// .review_hide{
+//   opacity: 0.2;
+// }
+
+// .hide-link:hover .review_hide{
+//   opacity: 0.9;
+// }
+
+// .review {
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   height: 100%;
+//   width: 100%;
+//   padding: 50px 20px;
+//   padding-right: 30px;
+
+
+//   h6 {
+//     font-family: 'Gagalin';
+//     font-size: 14px;
+//     line-height: 2;
+//     text-transform: uppercase;
+//   }
+
+//   p {
+
+//     font-family: 'Ubuntu';
+//     font-size: 14px;
+//     font-weight: 300;
+//     line-height: 1.71;
+//   }
+
+//   .review_link {
+//     padding: 10px 15px;
+//     border-radius: 5px;
+//     background-color: #2f3234;
+//     border: none;
+//     text-decoration: none;
+
+//     font-size: 13px;
+//     font-weight: 500;
+
+//     line-height: 2.31;
+//     text-transform: uppercase;
+
+//     &:hover {
+//       background-color: #1f2122;
+//     }
+
+//   }
+
+// }

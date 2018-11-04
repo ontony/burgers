@@ -1,22 +1,8 @@
 
 
-// .content{
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-around;
-// }
-
-// .content-left{
-//   background: url(/IMG-from-maket/drops.png) no-repeat center center;
-//   width: 452px;
-//   display: flex;
-//   justify-content: center;
-  
-// }
-
 
 .hero__container{
-  // flex: 1;
+  flex: 0.95;
 }
 
 .hero__content {
@@ -34,6 +20,7 @@
 
 
 .hero__desc{
+  max-width: 100px;
   font-family: 'Lifehack';
   font-size: 55px;
   font-weight: 500;
