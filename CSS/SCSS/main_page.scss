@@ -1,8 +1,5 @@
-
-
-
-.hero__container{
-  flex: 0.95;
+.hero__container {
+  flex: 1;
 }
 
 .hero__content {
@@ -10,16 +7,16 @@
   align-items: center;
 }
 
-.hero__picture{
+.hero__picture {
   margin-right: 10px;
 }
 
-.hero__title{
+.hero__title {
   color: orange;
 }
 
 
-.hero__desc{
+.hero__desc {
   max-width: 100px;
   font-family: 'Lifehack';
   font-size: 55px;
@@ -32,8 +29,9 @@
 
 
 
-.arrow{
+.arrow {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 
@@ -45,37 +43,42 @@
 
 // pagination
 
-.pagination__item{
+
+.pagination {
+  position: fixed;
+  top: 90px;
+  right: 50px;
+}
+
+.pagination__item {
+  margin-bottom: 5px;
+}
+
+
+.page_dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 16px;
   height: 16px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $white;
+  }
+
+  &:hover, {
+    border-color: white;
+  }
+
 }
 
-
-
-
-
-.page_dot{
-display: block;
-width: 8px;
-height: 8px;
-background-color: #ffffff;
-border-radius: 50%;
+.pagination__item-active .page_dot {
+  border-color: white;
 }
-
-
-// .page_dot::before{
-//   content: '';
-//   width: 16px;
-//   height: 16px;
-//   border: 2px solid white;
-//   border-radius: 50%;
-//   position: absolute;
-// }
-
-// content: '';
-// display: flex;
-// background-color: #ec1e79;
-// width: 0;
-// height: 0;
-// border-radius: 50%;
-// transition: 0.5s;

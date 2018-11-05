@@ -481,6 +481,12 @@ th {
   font-weight: normal;
   font-style: normal;
 }
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 1920px;
+}
+
 .section {
   min-width: 950px;
   height: 100vh;
@@ -574,7 +580,7 @@ th {
 }
 
 .hero__container {
-  flex: 0.95;
+  flex: 1;
 }
 
 .hero__content {
@@ -602,19 +608,42 @@ th {
 
 .arrow {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.pagination {
+  position: fixed;
+  top: 90px;
+  right: 50px;
 }
 
 .pagination__item {
-  width: 16px;
-  height: 16px;
+  margin-bottom: 5px;
 }
 
 .page_dot {
-  display: block;
-  width: 8px;
-  height: 8px;
-  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid transparent;
   border-radius: 50%;
+}
+.page_dot::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.page_dot:hover {
+  border-color: white;
+}
+
+.pagination__item-active .page_dot {
+  border-color: white;
 }
 
 .review-page {
@@ -730,6 +759,10 @@ th {
   color: rgba(47, 50, 52, 0.8);
 }
 
+.title--orange-title {
+  margin-bottom: 44px;
+}
+
 .form__left, .form__right {
   flex: 1;
 }
@@ -777,7 +810,7 @@ th {
 }
 
 .radiobtns {
-  margin-bottom: 30px;
+  margin-bottom: 7px;
 }
 
 .radiobtns__control {
@@ -840,7 +873,7 @@ th {
 }
 
 .checkbox input {
-  position: absolute;
+  position: relative;
   z-index: -1;
   opacity: 0;
   margin: 10px 0 0 20px;
