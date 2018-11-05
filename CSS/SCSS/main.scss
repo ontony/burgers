@@ -1,8 +1,17 @@
 
+@import "normalize.scss";
+@import "fonts.scss";
 
 
-@import url('../CSS/normalize.css');
+@import "layout.scss";
 
-@import url('../SCSS/main_page.scss');
-@import url('../SCSS/forms.scss');
-@import url('../SCSS/backgrounds.scss');
+@import "header.scss";
+@import "btns.scss";
+
+
+@import "main_page.scss";
+@import "reviews.scss";
+@import "title.scss";
+
+@import "whe_are.scss";
+@import "form.scss";
