@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+p,
 h1,
 h2,
 h3,
@@ -481,21 +482,25 @@ th {
   font-weight: normal;
   font-style: normal;
 }
+html {
+  font-size: 16px;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 1920px;
+  max-width: rem(1920px);
 }
 
 .section {
-  min-width: 950px;
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 
 .container {
   margin: 0 auto;
-  width: 940px;
+  width: 100%;
+  max-width: rem(940px);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -518,9 +523,13 @@ body {
   background: url(../../IMG-from-maket/backgrounnds/form_bg.jpg) center center/cover no-repeat;
 }
 
+.team {
+  background: url(../../IMG-from-maket/backgrounnds/team.jpg) center center/cover no-repeat;
+}
+
 .header {
   width: 100%;
-  padding-top: 12px;
+  padding-top: rem(12px);
   display: flex;
   justify-content: space-between;
 }
@@ -533,15 +542,28 @@ body {
 .nav {
   display: flex;
   font-family: "Ubuntu";
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
-  margin-right: 15px;
+  margin-right: rem(15px);
 }
 .nav__list {
   display: flex;
 }
 .nav__item {
   display: block;
+  margin: 0 rem(12px);
+  position: relative;
+}
+.nav__item::before {
+  content: "";
+  position: absolute;
+  width: rem(4px);
+  height: rem(4px);
+  display: block;
+  border-radius: 50%;
+  background: white;
+  top: rem(5px);
+  left: rem(-15px);
 }
 .nav__item_link {
   display: flex;
@@ -549,15 +571,6 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
-}
-.nav__item_link:after {
-  content: "";
-  width: 4px;
-  height: 4px;
-  display: block;
-  border-radius: 50%;
-  background: white;
-  margin: 0 10px;
 }
 
 .nav__item:last-child .nav__item_link::after {
@@ -570,13 +583,20 @@ body {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: rem(5px);
   border: none;
-  padding: 10px 15px;
+  padding: rem(10px) rem(15px);
   background-color: #e45028;
 }
+.btn:hover {
+  background: #c1401e;
+}
+
 .btn--bg-black {
   background-color: #2f3234;
+}
+.btn--bg-black:hover {
+  background: #1f2122;
 }
 
 .hero__container {
@@ -589,7 +609,7 @@ body {
 }
 
 .hero__picture {
-  margin-right: 10px;
+  margin-right: rem(rem(10px));
 }
 
 .hero__title {
@@ -597,44 +617,44 @@ body {
 }
 
 .hero__desc {
-  max-width: 100px;
   font-family: "Lifehack";
-  font-size: 55px;
+  font-size: rem(55px);
   font-weight: 500;
   line-height: 1.31;
   letter-spacing: -1.6px;
   color: white;
+  text-align: center;
 }
 
 .arrow {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .pagination {
   position: fixed;
-  top: 90px;
-  right: 50px;
+  top: rem(90px);
+  right: rem(50px);
 }
 
 .pagination__item {
-  margin-bottom: 5px;
+  margin-bottom: rem(5px);
 }
 
 .page_dot {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
-  border: 1px solid transparent;
+  width: rem(16px);
+  height: rem(16px);
+  border: rem(1px) solid transparent;
   border-radius: 50%;
 }
 .page_dot::before {
   content: "";
   display: block;
-  width: 6px;
-  height: 6px;
+  width: rem(6px);
+  height: rem(6px);
   border-radius: 50%;
   background-color: #ffffff;
 }
@@ -659,9 +679,9 @@ body {
 .review__item {
   width: 25%;
   height: 50%;
-  background-size: cover;
+  background: no-repeat;
   background-position: center center;
-  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
 }
 .review__item:hover .review__hover {
@@ -669,6 +689,9 @@ body {
 }
 
 .review__hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -678,41 +701,31 @@ body {
   opacity: 0;
   transition: opacity 0.3s;
   color: #ffffff;
-  padding-top: 16%;
-  padding-bottom: 16%;
-  padding-left: 8%;
-  padding-right: 12%;
 }
 .review__hover .review__title {
   font-family: "Gagalin";
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 2;
-  margin-bottom: 8%;
 }
 .review__hover .review__text {
   font-family: "Ubuntu";
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: lighter;
   line-height: 1.71;
-  margin-bottom: 5%;
+  margin-bottom: rem(15px);
 }
-
-.review__btn:hover {
-  background: #2f3234;
-}
-
 .title {
   font-family: "Gagalin";
-  font-size: 72px;
-  line-height: 0.89;
+  font-size: rem(72px);
   letter-spacing: normal;
+  text-align: center;
 }
 .title--orange {
   color: #e45028;
 }
 
 .whe-are_title {
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
 }
 .whe-are_title h4 {
   text-align: center;
@@ -720,7 +733,6 @@ body {
 
 .reason__list {
   display: flex;
-  align-items: center;
 }
 
 .reason__item {
@@ -728,6 +740,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 2%;
 }
 
 .reasons__item:last-child {
@@ -735,23 +748,22 @@ body {
 }
 
 .reason__banner {
-  margin-bottom: 33px;
+  margin-bottom: rem(33px);
 }
 
 .reason__title {
   font-family: "Lifehack";
-  font-size: 24px;
+  font-size: rem(24px);
   line-height: 1.17;
   letter-spacing: -0.6px;
   text-align: center;
   color: #2f3234;
-  width: 210px;
 }
 
 .reason__desc {
   opacity: 0.8;
   font-family: "Ubuntu";
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: lighter;
   line-height: 1.71;
   letter-spacing: normal;
@@ -760,7 +772,7 @@ body {
 }
 
 .title--orange-title {
-  margin-bottom: 44px;
+  margin-bottom: rem(44px);
 }
 
 .form__left, .form__right {
@@ -768,7 +780,7 @@ body {
 }
 
 .form__left {
-  margin-right: 20px;
+  margin-right: rem(20px);
 }
 
 .form {
@@ -784,9 +796,9 @@ body {
 }
 .form__input {
   color: #2f3234;
-  padding: 10px 21px;
-  border-radius: 5px;
-  border: solid 2px;
+  padding: rem(10px) rem(21px);
+  border-radius: rem(5px);
+  border: solid rem(2px);
 }
 .form__input:focus {
   border-color: #e45028;
@@ -795,14 +807,14 @@ body {
 
 .form__block {
   flex: 1;
-  margin-bottom: 18px;
-  margin-right: 20px;
+  margin-bottom: rem(18px);
+  margin-right: rem(20px);
 }
 .form__block:last-child {
   margin-right: 0;
 }
 .form__block-title {
-  margin-bottom: 8px;
+  margin-bottom: rem(8px);
 }
 
 .textarea {
@@ -810,7 +822,7 @@ body {
 }
 
 .radiobtns {
-  margin-bottom: 7px;
+  margin-bottom: rem(7px);
 }
 
 .radiobtns__control {
@@ -827,22 +839,22 @@ body {
 .radiobtns__radio {
   position: absolute;
   top: 0;
-  left: -9999px;
+  left: rem(-9999px);
 }
 
 .radiobtns__label-text {
-  margin-right: 20px;
+  margin-right: rem(20px);
 }
 
 .radiobtns__radio-fake {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 16px;
-  height: 16px;
+  width: rem(16px);
+  height: rem(16px);
   border-radius: 50%;
-  border: 1px solid #c9c9c9;
-  margin-right: 10px;
+  border: rem(1px) solid #c9c9c9;
+  margin-right: rem(10px);
 }
 
 .radiobtns__radio-fake::before {
@@ -856,16 +868,16 @@ body {
 }
 
 .radiobtns__radio:checked + .radiobtns__radio-fake::before {
-  width: 6px;
-  height: 6px;
+  width: rem(6px);
+  height: rem(6px);
 }
 
 .radiobtns__radio:checked + .radiobtns__radio-fake {
-  border: 1px solid #e45028;
+  border: rem(1px) solid #e45028;
 }
 
 .check {
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .checkbox {
@@ -876,22 +888,22 @@ body {
   position: relative;
   z-index: -1;
   opacity: 0;
-  margin: 10px 0 0 20px;
+  margin: rem(10px) 0 0 rem(20px);
 }
 
 .checkbox__text {
   position: relative;
-  padding: 0 0 0 50px;
+  padding: 0 0 0 rem(50px);
   cursor: pointer;
 }
 
 .checkbox__text:before {
   content: "";
   position: absolute;
-  top: -4px;
+  top: rem(-4px);
   left: 0;
-  width: 16px;
-  height: 16px;
+  width: rem(16px);
+  height: rem(16px);
   background: #ffffff;
 }
 
@@ -903,6 +915,102 @@ body {
 
 .submit__btn-clear {
   background: none;
+}
+
+.team-container {
+  position: relative;
+  margin-right: 0;
+}
+
+.team__wrapper {
+  height: 100%;
+  width: 67%;
+  background: #393b3c;
+  opacity: 0.93;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.team__content {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-title {
+  margin-bottom: rem(46px);
+}
+
+.team__item {
+  margin-bottom: rem(35px);
+}
+
+.team__member {
+  margin-left: rem(30px);
+  position: relative;
+  font-family: "Gagalin";
+  font-size: rem(14px);
+  line-height: 2;
+  color: #ffffff;
+  text-decoration: none;
+}
+.team__member::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url("/IMG-from-maket/team_arrow.png") center center/cover no-repeat;
+  height: rem(15px);
+  width: rem(15px);
+  top: rem(10px);
+  right: rem(220px);
+}
+
+.member__card {
+  display: flex;
+}
+
+.member__avatar {
+  margin-right: rem(20px);
+}
+.member__avatar > img {
+  border-radius: 50%;
+}
+
+.memeber__desc {
+  width: rem(210px);
+}
+
+.member__occupy {
+  font-family: "Ubuntu";
+  font-size: rem(14px);
+  font-weight: bold;
+  line-height: 1.71;
+}
+.member__occupy_desc {
+  font-size: rem(14px);
+  line-height: 1.71;
+  font-family: "Ubuntu";
+}
+
+.team__hidden {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+
+.team__member {
+  display: block;
+  position: relative;
+  width: rem(200px);
+}
+
+.team__member-active + .team__hidden {
+  height: rem(120px);
+  padding-top: 17px;
 }
 
 /*# sourceMappingURL=compile.css.map */

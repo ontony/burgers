@@ -15,10 +15,11 @@
 .review__item {
   width: 25%;
   height: 50%;
-  background-size: cover;
+  background: no-repeat;
   background-position: center center;
-  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
+
 
   &:hover {
     .review__hover {
@@ -28,6 +29,9 @@
 }
 
 .review__hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -39,30 +43,28 @@
 
   color: $white;
 
-  padding-top: 16%;
-  padding-bottom: 16%;
-  padding-left: 8%;
-  padding-right: 12%;
 
   .review__title {
     font-family: 'Gagalin';
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 2;
-    margin-bottom: 8%;
   }
 
   .review__text {
     font-family: 'Ubuntu';
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: lighter;
     line-height: 1.71;
-    margin-bottom: 5%;
+    margin-bottom: rem(15px);
+
+    p {}
   }
 }
 
-.review__btn:hover {
-  background: #2f3234;
-}
+
+// .review__btn:hover {
+//   background: #2f3234;
+// }
 
 
 
