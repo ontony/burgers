@@ -1,0 +1,94 @@
+
+
+.title-menu{
+  position: absolute;
+  top: rem(110px);
+  left: rem(100px);
+}
+
+.menu {
+  position: relative;
+
+  
+  &__list {
+    height: 100%;
+    display: flex;
+
+//выравниваем по правому краю менюшку
+position: absolute;
+top: 0;
+right: 0;
+
+  }
+  &__item {
+    display: flex;
+
+    &:hover {
+      .menu__trigger span{
+        color: $yellow;
+      }
+      .menu__wrap {
+        width: rem(540px);
+        transition: 0.9s;
+      }
+    }
+  }
+
+
+//hidden part
+
+&__wrap {
+  width: 0;
+  overflow: hidden;
+}
+
+
+
+
+
+
+  &__trigger {
+    @extend %cover;
+  
+    width: rem(80px);
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+
+    span {
+      display: flex;
+      align-items: center;
+      font-size: rem(40px);
+      font-family: 'Gagalin', sans-serif;
+      color: $white;
+      text-decoration: none;
+      transform: rotate(-90deg);
+      padding-bottom: rem(45px);
+
+      text-align: center;
+
+      //ниже то что запрящает перепрыгивать на вторую строчку
+      white-space: nowrap;
+      // а вот это делает так чтоб не вылазел блок никуда
+      width: 100%; // только нужно еще добавить отступы на блоке-родителе (padding-bottom)
+
+    }
+  }
+
+  &__content {
+    background-color: rgba($color: #2f3234, $alpha: .9);
+    height: 100%;
+    padding: rem(62px) rem(37px) rem(62px) rem(33px);
+    line-height: rem(24px);
+    font-family:  'Ubuntu';
+    font-weight: lighter;
+    color: $white;
+    min-width: rem(540px);
+    &:last-child {
+      padding-right: rem(60px);
+    }
+  }
+
+
+
+}

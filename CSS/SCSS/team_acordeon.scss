@@ -109,10 +109,19 @@
 
 
 
-.team__member-active+.team__hidden,
+.team__member-active + .team__hidden
   {
   height: rem(120px);
   padding-top: 17px;
+
 }
+
+.team__member-active {
+  .team__member::before {
+    transform: rotate(-180deg);
+
+  }
+}  
+
 
 // End of function what hide our

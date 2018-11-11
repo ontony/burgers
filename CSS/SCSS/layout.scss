@@ -18,8 +18,14 @@ $orange_btn_hover: #c1401e;
 $white: #ffffff;
 
 
+%cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .section {
-  // min-width: rem(950px);
+  min-width: rem(950px);
   height: 100vh;
   min-height: rem(650px);
 }
@@ -62,6 +68,10 @@ background: url(../../IMG-from-maket/backgrounnds/whe-are.png) center center / c
   background: url(../../IMG-from-maket/backgrounnds/team.jpg) center center / cover no-repeat;
 }
 
+.menu {
+  background: url(../../IMG-from-maket/backgrounnds/menu_main.jpg) center center / cover no-repeat;
+
+}
 
 
 

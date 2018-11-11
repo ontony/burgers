@@ -1,10 +1,14 @@
 .title{
   font-family: 'Gagalin';
   font-size: rem(72px);
-  // line-height: 0.89;
+  line-height: 0.89;
   letter-spacing: normal;
   text-align: center;
   &--orange {
     color: $orange;
   }
+  &--white {
+    color: $white;
+  }
+
 }
