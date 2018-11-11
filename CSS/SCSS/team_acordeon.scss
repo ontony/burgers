@@ -1,0 +1,127 @@
+.team-container {
+  position: relative;
+  margin-right: 0;
+}
+
+.team__wrapper {
+  height: 100%;
+  width: 67%;
+  background: #393b3c;
+  opacity: 0.93;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
+
+.team__content {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-title {
+  margin-bottom: rem(46px);
+}
+
+
+.team__item {
+  margin-bottom: rem(35px);
+}
+
+.team__member {
+  margin-left: rem(30px);
+  position: relative;
+  font-family: 'Gagalin';
+  font-size: rem(14px);
+  line-height: 2;
+  color: $white;
+  text-decoration: none;
+
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+
+    background: url('/IMG-from-maket/team_arrow.png') center center / cover no-repeat;
+    height: rem(15px);
+    width: rem(15px);
+    top: rem(10px);
+    right: rem(220px);
+  }
+
+}
+
+
+
+
+
+.member__card {
+  display: flex;
+}
+
+.member__avatar {
+  margin-right: rem(20px);
+  
+  & > img {
+    border-radius: 50%;
+
+  } 
+}
+
+.memeber__desc {
+  width: rem(210px);
+}
+
+.member__occupy {
+  font-family: 'Ubuntu';
+  font-size: rem(14px);
+  font-weight: bold;
+  line-height: 1.71;
+
+  &_desc {
+    font-size: rem(14px);
+    line-height: 1.71;
+    font-family: 'Ubuntu';
+  }
+
+}
+
+// Function what hide our menu
+
+.team__hidden {
+  height: 0;
+  overflow: hidden;
+
+
+  transition: height 0.5s ease-in-out;
+}
+
+.team__member {
+  display: block;
+  position: relative;
+  width: rem(200px);
+}
+
+
+
+.team__member-active + .team__hidden
+  {
+  height: rem(120px);
+  padding-top: 17px;
+
+}
+
+.team__member-active {
+  .team__member::before {
+    transform: rotate(-180deg);
+
+  }
+}  
+
+
+// End of function what hide our

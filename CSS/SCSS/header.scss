@@ -1,9 +1,8 @@
-
 // header
 
-.header{
+.header {
   width: 100%;
-  padding-top: 12px;
+  padding-top: rem(12px);
   display: flex;
   justify-content: space-between;
 }
@@ -15,18 +14,36 @@
   align-items: center;
 }
 
-.nav{
+.nav {
   display: flex;
   font-family: 'Ubuntu';
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
-  margin-right: 15px;
+  margin-right: rem(15px);
 
   &__list {
     display: flex;
   }
+
+
   &__item {
     display: block;
+    margin: 0 rem(12px);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+
+      width: rem(4px);
+      height: rem(4px);
+      display: block;
+      border-radius: 50%;
+      background: white;
+      top: rem(5px);
+      left: rem(-15px);
+      
+    }
 
     &_link {
       display: flex;
@@ -35,15 +52,7 @@
       text-transform: uppercase;
       text-decoration: none;
 
-      &:after {
-        content: '';
-        width: 4px;
-        height: 4px;
-        display: block;
-        border-radius: 50%;
-        background: white;
-        margin: 0 10px;
-      }
+
     }
   }
 }
@@ -51,6 +60,4 @@
 .nav__item:last-child .nav__item_link::after {
   display: none;
 }
-
-
 

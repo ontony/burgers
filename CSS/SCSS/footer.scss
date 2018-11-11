@@ -1,0 +1,65 @@
+.footer {
+  height: rem(60px);
+  background: $black;
+  color: $white;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+}
+
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.tel__wrapper a {
+  color: $white;
+}
+
+.phone-icon {
+  width: rem(12px);
+  height: rem(12px);
+  fill: $orange;
+}
+
+.socials {
+height: 100%;
+  
+  &__list {
+    display: flex;
+  
+  }
+
+  &__item {
+    margin-right: rem(20px);
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    & a {
+      color: $white;
+    }
+  }
+
+
+}
+
+
+.vk-icon, .tw-icon, .inst-icon, .fb-icon {
+  width: rem(20px);
+  height: rem(20px);
+  fill: #ffffff;
+  opacity: 0.3;
+}
+
+.vk-icon:hover, .tw-icon:hover, .inst-icon:hover, .fb-icon:hover {
+  opacity: 1;
+}
+
+
