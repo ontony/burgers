@@ -1,8 +1,19 @@
 .team-container {
+ 
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  overflow: hidden;
+  
+  
   position: relative;
-  width: 100%;
-  margin-right: 0;
-  margin-left: 0;
+
+  margin: 0 0;
+
+
 }
 
 .team__wrapper {
@@ -13,7 +24,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  // left: 50%;
+  left: 50%;
 
 
   @include tablet {
@@ -35,7 +46,10 @@
   align-items: center;
   justify-content: center;
 
-  text-align: center;
+  @include tablet {
+    text-align: center;
+}
+  
 
 
 
