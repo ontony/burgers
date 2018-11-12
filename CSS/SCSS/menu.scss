@@ -1,6 +1,4 @@
-
-
-.title-menu{
+.title-menu {
   position: absolute;
   top: rem(110px);
   left: rem(100px);
@@ -9,38 +7,44 @@
 .menu {
   position: relative;
 
-  
+
   &__list {
     height: 100%;
     display: flex;
 
-//выравниваем по правому краю менюшку
-position: absolute;
-top: 0;
-right: 0;
+    //выравниваем по правому краю менюшку
+    position: absolute;
+    top: 0;
+    right: 0;
 
   }
+
   &__item {
     display: flex;
 
     &:hover {
-      .menu__trigger span{
+      .menu__trigger span {
         color: $yellow;
       }
+
       .menu__wrap {
         width: rem(540px);
         transition: 0.9s;
+
+        @include tablet {
+          width: rem(300px);
+        }
       }
     }
   }
 
 
-//hidden part
+  //hidden part
 
-&__wrap {
-  width: 0;
-  overflow: hidden;
-}
+  &__wrap {
+    width: 0;
+    overflow: hidden;
+  }
 
 
 
@@ -49,7 +53,7 @@ right: 0;
 
   &__trigger {
     @extend %cover;
-  
+
     width: rem(80px);
     text-decoration: none;
     display: flex;
@@ -80,13 +84,23 @@ right: 0;
     height: 100%;
     padding: rem(62px) rem(37px) rem(62px) rem(33px);
     line-height: rem(24px);
-    font-family:  'Ubuntu';
+    font-family: 'Ubuntu';
     font-weight: lighter;
     color: $white;
     min-width: rem(540px);
+
     &:last-child {
       padding-right: rem(60px);
     }
+
+    p {
+      @include tablet {
+        width: rem(230px);
+      }
+
+    }
+
+
   }
 
 

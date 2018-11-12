@@ -1,5 +1,17 @@
+
+
+
+
 html{
   font-size: 16px;
+
+
+  @include tablet {
+    font-size: 14px;
+  }
+  @include smart {
+    font-size: 13px;
+  }
 }
 
 
@@ -10,12 +22,6 @@ body {
 }
 
 
-$black:  #2f3234;
-$black_btn_hover: #1f2122;
-$yellow: #f9b43b;
-$orange: #e45028;
-$orange_btn_hover: #c1401e;
-$white: #ffffff;
 
 
 %cover {
@@ -24,8 +30,14 @@ $white: #ffffff;
   background-size: cover;
 }
 
+//mixins
+
+
+
+
+
 .section {
-  min-width: rem(950px);
+  // min-width: rem(950px); Это сдомало нам все чтоб модно было сморщивать
   height: 100vh;
   min-height: rem(650px);
 }
@@ -39,10 +51,20 @@ $white: #ffffff;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   &--without-align {
     align-items: initial;
   }
+
+  @include tablet {
+    width: 95%;
+  }
+
+  @include smart {
+    width: 95%;
+  }
+
 }
 
 

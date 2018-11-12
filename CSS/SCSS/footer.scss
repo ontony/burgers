@@ -16,15 +16,22 @@
 .contacts {
   display: flex;
   flex-direction: column;
+
+  .address {
+    margin-bottom: rem(7px);
+  }
 }
 
 .tel__wrapper a {
   color: $white;
+  text-decoration: none;
+  color: $orange;
+  font-weight: bold;
 }
 
 .phone-icon {
-  width: rem(12px);
-  height: rem(12px);
+  width: rem(15px);
+  height: rem(15px);
   fill: $orange;
 }
 

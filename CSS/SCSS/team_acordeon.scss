@@ -1,16 +1,29 @@
 .team-container {
   position: relative;
+  width: 100%;
   margin-right: 0;
+  margin-left: 0;
 }
 
 .team__wrapper {
   height: 100%;
-  width: 67%;
   background: #393b3c;
   opacity: 0.93;
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
+  left: 50%;
+
+
+  @include tablet {
+    left: 0;
+  }
+
+  @include smart {
+
+
+  }
 
 }
 
@@ -21,15 +34,36 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  text-align: center;
+
+
+
 }
 
 .team-title {
   margin-bottom: rem(46px);
 }
 
+.team__list{
+
+  @include tablet {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+}
+
 
 .team__item {
   margin-bottom: rem(35px);
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 }
 
 .team__member {
@@ -40,6 +74,8 @@
   line-height: 2;
   color: $white;
   text-decoration: none;
+
+
 
 
   &::before {
@@ -62,15 +98,21 @@
 
 .member__card {
   display: flex;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+}
+  
 }
 
 .member__avatar {
   margin-right: rem(20px);
-  
-  & > img {
+
+  &>img {
     border-radius: 50%;
 
-  } 
+  }
 }
 
 .memeber__desc {
@@ -111,10 +153,16 @@
 
 
 
-.team__member-active + .team__hidden
-  {
+.team__member-active+.team__hidden {
   height: rem(120px);
   padding-top: 17px;
+
+
+  @include tablet {
+    height: rem(225px);
+}
+  
+
 
 }
 
@@ -123,7 +171,7 @@
     transform: rotate(-180deg);
 
   }
-}  
+}
 
 
 // End of function what hide our
