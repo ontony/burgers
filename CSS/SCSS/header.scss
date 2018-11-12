@@ -42,7 +42,7 @@
       background: white;
       top: rem(5px);
       left: rem(-15px);
-      
+
     }
 
     &_link {
@@ -55,9 +55,47 @@
 
     }
   }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include smart {
+    display: none;
+  }
+
+
+}
+
+.order_btn {
+  @include tablet {
+    margin-right: rem(30px);
+  }
+  @include smart {
+    margin-right: rem(30px);
+  }
 }
 
 .nav__item:last-child .nav__item_link::after {
   display: none;
 }
 
+
+
+//hamburger__menuuuu
+.ham-stick {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include smart {
+    display: block;
+  }
+
+}

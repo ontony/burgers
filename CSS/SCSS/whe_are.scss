@@ -1,18 +1,21 @@
-
-.whe-are_title{
+.whe-are_title {
   margin-bottom: rem(50px);
 
-  h4{
+  h4 {
     text-align: center;
   }
 }
 
-.reason__list{
+.reason__list {
   display: flex;
+
+  @include smart {
+    flex-direction: column;
+  }
 }
 
 
-.reason__item{
+.reason__item {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -20,16 +23,32 @@
   padding: 0 2%;
   // width: 30%;
   // margin-right: 5%;
+
+  @include smart {
+    flex-direction: row;
+  }
+
+
 }
 
-.reasons__item:last-child{
+.reasons__item:last-child {
   margin-right: 0;
 }
 
-.reason__banner{
+.reason__banner {
   margin-bottom: rem(33px);
+  
+  .reason-img {
+    width: rem(97px);
+
+  } 
+  
+  @include smart {
+margin-right: rem(10px);
+  }
 }
-.reason__title{
+
+.reason__title {
   font-family: 'Lifehack';
   font-size: rem(24px);
   line-height: 1.17;
@@ -37,16 +56,23 @@
   text-align: center;
   color: #2f3234;
 
-}
-
-  .reason__desc{
-    opacity: 0.8;
-    font-family: 'Ubuntu';
-    font-size: rem(14px);
-    font-weight: lighter;
-    line-height: 1.71;
-    letter-spacing: normal;
-    text-align: center;
-    color: rgba(47, 50, 52, 0.8);
+  @include smart {
+    text-align: left;
   }
 
+}
+
+.reason__desc {
+  opacity: 0.8;
+  font-family: 'Ubuntu';
+  font-size: rem(14px);
+  font-weight: lighter;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgba(47, 50, 52, 0.8);
+
+  @include smart {
+    text-align: left;
+  }
+}

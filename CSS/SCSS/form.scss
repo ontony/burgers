@@ -1,25 +1,34 @@
-
 .title--orange-title {
   margin-bottom: rem(44px);
 }
 
-.form__left, .form__right {
+.form__left,
+.form__right {
   flex: 1;
 }
 
-.form__left { margin-right: rem(20px); }
+.form__left {
+  margin-right: rem(20px);
+
+  @include tablet {
+    margin-right: 0;
+  }
+}
 
 .form {
   width: 100%;
   color: $white;
   font-family: "Ubuntu";
-  font-size: 14px;
+  font-size: rem(14px);
 
-  
+
 
   display: flex;
   justify-content: space-between;
 
+  @include tablet {
+    flex-direction: column;
+  }
 
 
   &__row {
@@ -47,6 +56,8 @@
 
   margin-right: rem(20px);
 
+
+
   &:last-child {
     margin-right: 0;
   }
@@ -63,50 +74,50 @@
 }
 
 
-.radiobtns{
+.radiobtns {
   margin-bottom: rem(7px);
 }
 
 
 
-.radiobtns__control{
+.radiobtns__control {
   display: flex;
   justify-content: flex-start;
 
 }
 
-.radiobtns__label{
+.radiobtns__label {
   position: relative;
   display: flex;
   align-items: center;
 }
 
 
-.radiobtns__radio{
+.radiobtns__radio {
   position: absolute;
   top: 0;
   left: rem(-9999px);
-  
+
 }
 
-.radiobtns__label-text{
+.radiobtns__label-text {
   margin-right: rem(20px);
 }
 
 
-.radiobtns__radio-fake{
+.radiobtns__radio-fake {
   display: flex;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
   width: rem(16px);
   height: rem(16px);
   border-radius: 50%;
-  border: rem(1px) solid #c9c9c9 ;
+  border: rem(1px) solid #c9c9c9;
   margin-right: rem(10px);
 
 }
 
-.radiobtns__radio-fake::before{
+.radiobtns__radio-fake::before {
   content: '';
   display: flex;
   background-color: $orange;
@@ -116,12 +127,12 @@ align-items: center;
   transition: 0.2s;
 }
 
-.radiobtns__radio:checked + .radiobtns__radio-fake::before{
+.radiobtns__radio:checked+.radiobtns__radio-fake::before {
   width: rem(6px);
   height: rem(6px);
 }
 
-.radiobtns__radio:checked + .radiobtns__radio-fake{
+.radiobtns__radio:checked+.radiobtns__radio-fake {
   border: rem(1px) solid $orange;
 }
 
@@ -136,7 +147,7 @@ align-items: center;
 
 
 .checkbox {
-color: $white;
+  color: $white;
 }
 
 
@@ -146,11 +157,13 @@ color: $white;
   opacity: 0;
   margin: rem(10px) 0 0 rem(20px);
 }
+
 .checkbox__text {
   position: relative;
   padding: 0 0 0 rem(50px);
   cursor: pointer;
 }
+
 .checkbox__text:before {
   content: '';
   position: absolute;
@@ -161,7 +174,7 @@ color: $white;
   background: $white;
 }
 
-.checkbox input:checked + .checkbox__text:before {
+.checkbox input:checked+.checkbox__text:before {
   background: url(../../IMG-from-maket/checkmark_orange.png) center center / contain no-repeat;
   transform: scale(0.8);
   transition: 0.2s;
@@ -173,5 +186,3 @@ color: $white;
 .submit__btn-clear {
   background: none;
 }
-
-
