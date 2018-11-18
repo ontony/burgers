@@ -17,6 +17,10 @@
     top: 0;
     right: 0;
 
+    @include smart {
+      position: relative;
+    }
+
   }
 
   &__item {
@@ -33,6 +37,12 @@
 
         @include tablet {
           width: rem(300px);
+        }
+
+
+        @include smart {
+          flex: 1;
+          z-index: 1;
         }
       }
     }
@@ -54,6 +64,8 @@
   &__trigger {
     @extend %cover;
 
+    padding-bottom: rem(45px);
+
     width: rem(80px);
     text-decoration: none;
     display: flex;
@@ -67,7 +79,7 @@
       color: $white;
       text-decoration: none;
       transform: rotate(-90deg);
-      padding-bottom: rem(45px);
+      // padding-bottom: rem(45px);
 
       text-align: center;
 

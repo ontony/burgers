@@ -1,7 +1,17 @@
+.map__section {
+  position: relative;
+}
+
 .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   height: rem(60px);
-  background: $black;
+  background: url(../../IMG-from-maket/backgrounnds/footer_bg.jpg) center center / cover no-repeat;
+
   color: $white;
+  width: 100%;
+
 
   &__container {
     width: 100%;
@@ -23,16 +33,20 @@
 }
 
 .tel__wrapper a {
+
   color: $white;
   text-decoration: none;
   color: $orange;
   font-weight: bold;
 }
 
+
+
 .phone-icon {
-  width: rem(15px);
-  height: rem(15px);
+  width: rem(12px);
+  height: rem(12px);
   fill: $orange;
+  
 }
 
 .socials {
@@ -49,8 +63,9 @@ height: 100%;
       margin-right: 0;
     }
     
-    & a {
+    &_link {
       color: $white;
+      display: flex;
     }
   }
 

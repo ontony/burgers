@@ -5,7 +5,96 @@
   padding-top: rem(12px);
   display: flex;
   justify-content: space-between;
+
+
+  ///////Навешенный активный класс для меню!!!!
+  &__menu_active {
+    background: rgba(#2f3134, 0.9);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    // padding: 0;
+    position: fixed;
+    z-index: 99;
+
+    .header__btns {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .logo {
+      position: fixed;
+    }
+
+
+    .nav {
+      display: block;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      &__item {
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+
+
+
+
+        &::before {
+          position: relative;
+          top: 0;
+          left: 0;
+          margin-bottom: 20px;
+
+        }
+      }
+    }
+
+    .order_btn {
+      display: none;
+    }
+
+
+    ///////переделывание гамбургер меню в крестик меню
+    .ham-stick {
+      opacity: 0.7;
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(1){
+          transform: rotate(45deg);
+          transition: 0.5s;
+      }
+      &:nth-child(3){
+        transform: rotate(-45deg) translate(13px, -13px);
+        transition: 0.8s;
+      }
+    }
+  }
+  ///////Навешенный активный класс для меню!!!!
 }
+
+
 
 
 
@@ -45,6 +134,10 @@
 
     }
 
+    &:first-child::before {
+      display: none;
+    }
+
     &_link {
       display: flex;
       align-items: center;
@@ -69,29 +162,46 @@
 
 .order_btn {
   @include tablet {
-    margin-right: rem(30px);
+    position: absolute;
+    right: 90px;
   }
+
   @include smart {
-    margin-right: rem(30px);
+    right: 90px;
   }
 }
 
 .nav__item:last-child .nav__item_link::after {
   display: none;
+  
 }
 
 
 
+
 //hamburger__menuuuu
+
+.hamburger__menu {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+
+  position: fixed;
+  top: 30px;
+}
+
+
 .ham-stick {
-  width: 35px;
-  height: 5px;
+  width: 24px;
+  height: 4px;
   background-color: white;
-  margin: 6px 0;
+  border-radius: 2px;
+  margin: 5px 0;
   display: none;
 
   @include tablet {
     display: block;
+
   }
 
   @include smart {

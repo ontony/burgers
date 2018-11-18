@@ -21,7 +21,9 @@
   width: 50%;
 
   @include tablet {
-    width: 100%;
+    width: 90%;
+    margin-right: 0;
+    margin-bottom: rem(50px);
   }
 
 }
@@ -36,9 +38,12 @@
 
 .hero__title {
   color: orange;
+  text-align: left;
+  margin-bottom: rem(40px);
 
   @include tablet {
     font-size: rem(63px);
+    text-align: center;
   }
 
 }
@@ -51,7 +56,10 @@
   line-height: 1.31;
   letter-spacing: -1.6px;
   color: white;
-  text-align: center;
+
+  @include tablet {
+    text-align: center;
+  }
 }
 
 

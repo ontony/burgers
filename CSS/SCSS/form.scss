@@ -28,8 +28,12 @@
 
   @include tablet {
     flex-direction: column;
+    width: rem(470px);
   }
 
+  @include smart {
+    width: 95%;
+  }
 
   &__row {
     display: flex;
@@ -172,11 +176,12 @@
   width: rem(16px);
   height: rem(16px);
   background: $white;
+
 }
 
 .checkbox input:checked+.checkbox__text:before {
   background: url(../../IMG-from-maket/checkmark_orange.png) center center / contain no-repeat;
-  transform: scale(0.8);
+  // transform: scale(0.8);
   transition: 0.2s;
 }
 

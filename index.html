@@ -9,16 +9,21 @@
   <link rel="stylesheet" href="CSS/css/compile.css">
 
   <title>Document</title>
+
+
+
 </head>
 
 <body>
+
+
   <div class="wrapper">
 
     <div class="maincontent">
       <section class="section hero">
         <div class="container">
-          <header class="header">
-            <div class="logo">
+          <header class="header" id="header" >
+            <div class="logo" id="logo">
               <div class="logo__img">
                 <img src="IMG-from-maket/logo.png" alt="logo.img">
               </div>
@@ -49,13 +54,13 @@
                 </ul>
               </div>
               <a href="#" class="btn order_btn">Заказать</a>
-              <a href="#" class="hamburger__menu">
-                <div class="ham-stick"></div>
-                <div class="ham-stick"></div>
-                <div class="ham-stick"></div>
-              </a>
-
             </div>
+
+            <a href="#" class="hamburger__menu" id="hamburger">
+              <span class="ham-stick"></span>
+              <span class="ham-stick"></span>
+              <span class="ham-stick"></span>
+            </a>
 
 
           </header>
@@ -96,9 +101,10 @@
         <div class="reason">
           <ul class="reason__list">
             <li class="reason__item">
-              <div class="reason_banner">
-                <img class="reason-img" src="IMG-from-maket/whe_are/meat.png" alt="">
-              </div>
+              <div class="reason__banner">
+                <svg class="whe__are_svg" viewBox="0 0 96.428 89.246" enable-background="new 0 0 96.428 89.246">
+                  <use xlink:href="CSS/css/sprite.svg#meat"></use>
+                </svg>              </div>
               <div class="reason__part">
                 <h4 class="reason__title">100% свежее мясо</h4>
                 <div class="reason__desc">
@@ -108,7 +114,9 @@
             </li>
             <li class="reason__item">
               <div class="reason__banner">
-                <img class="reason-img" src="IMG-from-maket/whe_are/hand.png" alt="">
+                <svg class="whe__are_svg" viewBox="0 0 73 85.875" enable-background="new 0 0 73 85.875">
+                  <use xlink:href="CSS/css/sprite.svg#hand"></use>
+                </svg>
               </div>
               <div class="reason__part">
                 <h4 class="reason__title">
@@ -123,8 +131,9 @@
             </li>
             <li class="reason__item">
               <div class="reason__banner">
-                <img class="reason-img" src="IMG-from-maket/whe_are/natural.png" alt="">
-              </div>
+                <svg class="whe__are_svg" viewBox="0 0 88 75.534" enable-background="new 0 0 88 75.534">
+                  <use xlink:href="CSS/css/sprite.svg#natural"></use>
+                </svg>              </div>
               <div class="reason__part">
                 <h4 class="reason__title">
                   Натуральные ингредиенты
@@ -141,124 +150,257 @@
       </div>
     </section>
 
-
-    <section class="section team">
-      <div class=" team-container">
-        <div class="team__wrapper">
-          <div class="team__content">
-            <h2 class="title title--orange team-title">Команда</h2>
-            <div class="accordeon team-accordeon">
-              <ul class="team__list">
-                <li id="one" class="team__item">
-                  <a href="#one" class="team__member team__member-active">Дениел Ретклиф</a>
-                  <div class="team__hidden">
-                    <div class="member__card">
-                      <div class="member__avatar">
-                        <img src="IMG-from-maket/apex.jpg" alt="team_photo">
-                      </div>
-                      <div class="memeber__desc">
-                        <div class="member__occupy">Оператор</div>
-                        <p class="member__occupy_desc">С радостью поможет подобрпть идеальный бургер и оформить заказ.</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li id="two" class="team__item">
-                  <a href="#two" class="team__member">Ричард Джеймс</a>
-                  <div class="team__hidden">
-                    <div class="member__card">
-                      <div class="member__avatar">
-                        <img src="IMG-from-maket/apex.jpg" alt="team_photo">
-                      </div>
-                      <div class="memeber__desc">
-                        <div class="member__occupy">Оператор</div>
-                        <p class="member__occupy_desc">С радостью поможет подобрпть идеальный бургер и оформить заказ.</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li id="three" class="team__item">
-                  <a href="#three" class="team__member">Джекки Чан</a>
-                  <div class="team__hidden">
-                    <div class="member__card">
-                      <div class="member__avatar">
-                        <img src="IMG-from-maket/apex.jpg" alt="team_photo">
-                      </div>
-                      <div class="memeber__desc">
-                        <div class="member__occupy">Оператор</div>
-                        <p class="member__occupy_desc">С радостью поможет подобрпть идеальный бургер и оформить заказ.</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li id="four" class="team__item">
-                  <a href="#four" class="team__member">Николай Дроздов</a>
-                  <div class="team__hidden">
-                    <div class="member__card">
-                      <div class="member__avatar">
-                        <img src="IMG-from-maket/apex.jpg" alt="team_photo">
-                      </div>
-                      <div class="memeber__desc">
-                        <div class="member__occupy">Оператор</div>
-                        <p class="member__occupy_desc">С радостью поможет подобрпть идеальный бургер и оформить заказ.</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-              </ul>
-            </div>
+    <section class="section burger__menu">
+      <div class="container burger__menu-container">
+        <div class="left__slider">
+          <div class="slider__arrow slider__arrow-left">
+            <a href="#" class="arrow__link arrow__link-left">
+              <img src="IMG-from-maket/arrow-scroll.png" alt="down" class="arrow__down_img">
+            </a>
           </div>
+        </div>
 
+        <ul class="burger__slider_list">
+          <li class="burger__slider_item burger__slider_item-active">
+              <div class="slider__content">
+                  <div class="burger">
+                    <div class="burger__contain">
+                      <a href="#" class="burger__btn">
+                        <div class="burger__btn_img">
+                          <img src="IMG-from-maket/burger_btn.png" alt="btgimg">
+                        </div>
+                        <div class="burger__btn_text">Состав</div>
+                      </a>
+                      <img class="kkal-img" src="/IMG-from-maket/kkal.png" alt="kkal">
+                      <div class="burger__picture">
+                        <img src="IMG-from-maket/black_burger.png" alt="blk_brgr">
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="description">
+                    <div class="title title--white burger__menu-title">Dark beef Burger</div>
+                    <p class="burger__desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+                      нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением
+                      экзотического соуса чураско.</p>
+                    <div class="burger__price">
+                      <div class="burger__cost title title--orange">500 <span>рублей</span></div>
+                      <button type="button" class="btn menu-order-btn">Заказать</button>
+                    </div>
+                  </div>
+        
+        
+                </div>
+          </li>
+          <li class="burger__slider_item">
+              <div class="slider__content">
+                  <div class="burger">
+                    <div class="burger__contain">
+                      <a href="#" class="burger__btn">
+                        <div class="burger__btn_img">
+                          <img src="IMG-from-maket/burger_btn.png" alt="btgimg">
+                        </div>
+                        <div class="burger__btn_text">Состав</div>
+                      </a>
+                      <img class="kkal-img" src="/IMG-from-maket/kkal.png" alt="kkal">
+                      <div class="burger__picture">
+                        <img src="IMG-from-maket/black_burger.png" alt="blk_brgr">
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="description">
+                    <div class="title title--white burger__menu-title">Dark beef Burger</div>
+                    <p class="burger__desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+                      нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением
+                      экзотического соуса чураско.</p>
+                    <div class="burger__price">
+                      <div class="burger__cost title title--orange">500 <span>рублей</span></div>
+                      <button type="button" class="btn menu-order-btn">Заказать</button>
+                    </div>
+                  </div>
+        
+        
+                </div>
+          </li>
+          <li class="burger__slider_item">
+              <div class="slider__content">
+                  <div class="burger">
+                    <div class="burger__contain">
+                      <a href="#" class="burger__btn">
+                        <div class="burger__btn_img">
+                          <img src="IMG-from-maket/burger_btn.png" alt="btgimg">
+                        </div>
+                        <div class="burger__btn_text">Состав</div>
+                      </a>
+                      <img class="kkal-img" src="/IMG-from-maket/kkal.png" alt="kkal">
+                      <div class="burger__picture">
+                        <img src="IMG-from-maket/black_burger.png" alt="blk_brgr">
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="description">
+                    <div class="title title--white burger__menu-title">Dark beef Burger</div>
+                    <p class="burger__desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+                      нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением
+                      экзотического соуса чураско.</p>
+                    <div class="burger__price">
+                      <div class="burger__cost title title--orange">500 <span>рублей</span></div>
+                      <button type="button" class="btn menu-order-btn">Заказать</button>
+                    </div>
+                  </div>
+        
+        
+                </div>
+          </li>
+
+        </ul>
+
+
+        <div class="left__slider">
+          <div class="slider__arrow slider__arrow-right">
+            <a href="#" class="arrow__link arrow__link-right">
+              <img src="IMG-from-maket/arrow-scroll.png" alt="down" class="arrow__down_img">
+            </a>
+
+          </div>
+        </div>
+
+
+
+      </div>
+  </div>
+  </section>
+
+
+
+  <section class="section team">
+    <div class=" team-container">
+      <div class="team__wrapper">
+        <div class="team__content">
+          <h2 class="title title--yellow team-title">Команда</h2>
+          <div class="accordeon team-accordeon">
+            <ul class="team__list" id="teamList">
+              <li class="team__item" id="teamAct1">
+                <a href="#one" class="team__member" id="teamLink1">Дениел Ретклиф</a>
+                <div class="team__hidden">
+                  <div class="member__card">
+                    <div class="member__avatar">
+                      <img src="IMG-from-maket/apex.jpg" alt="team_photo">
+                    </div>
+                    <div class="memeber__desc">
+                      <div class="member__occupy">Оператор</div>
+                      <p class="member__occupy_desc">С радостью поможет подобрпть идеальный бургер и оформить заказ.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="team__item" id="teamAct2">
+                <a href="#two" class="team__member" id="teamLink2">Ричард Джеймс</a>
+                <div class="team__hidden">
+                  <div class="member__card">
+                    <div class="member__avatar">
+                      <img src="IMG-from-maket/apex.jpg" alt="team_photo">
+                    </div>
+                    <div class="memeber__desc">
+                      <div class="member__occupy">Оператор</div>
+                      <p class="member__occupy_desc">С радостью поможет подобрпть идеальный бургер и оформить заказ.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li id="three" class="team__item">
+                <a href="#three" class="team__member" id="teamLink3">Джекки Чан</a>
+                <div class="team__hidden">
+                  <div class="member__card">
+                    <div class="member__avatar">
+                      <img src="IMG-from-maket/apex.jpg" alt="team_photo">
+                    </div>
+                    <div class="memeber__desc">
+                      <div class="member__occupy">Оператор</div>
+                      <p class="member__occupy_desc">С радостью поможет подобрпть идеальный бургер и оформить заказ.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li id="four" class="team__item">
+                <a href="#four" class="team__member" id="teamLink4">Николай Дроздов</a>
+                <div class="team__hidden">
+                  <div class="member__card">
+                    <div class="member__avatar">
+                      <img src="IMG-from-maket/apex.jpg" alt="team_photo">
+                    </div>
+                    <div class="memeber__desc">
+                      <div class="member__occupy">Оператор</div>
+                      <p class="member__occupy_desc">С радостью поможет подобрпть идеальный бургер и оформить заказ.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
         </div>
 
       </div>
-    </section>
 
-    <!-- menu acordion -->
-    <section class="section menu">
-      <!-- <div class="container"> -->
-        <div class="title title--white title-menu">Меню</div>
+    </div>
+  </section>
 
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a href="#" class="menu__trigger" style="background-image: url('IMG-from-maket/backgrounnds/bg-btn-1.jpg') ">
-              <span>Для мясоедов</span>
-            </a>
-            <div class="menu__wrap">
-              <div class="menu__content">
-                <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
-                    </p>
-              </div>
-            </div>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__trigger" style="background-image: url('IMG-from-maket/backgrounnds/bg-btn-2.jpg') ">
-              <span>Вегатерианское</span>
-            </a>
-            <div class="menu__wrap">
-              <div class="menu__content">
-                <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
-                    </p>
-              </div>
-            </div>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__trigger" style="background-image: url('IMG-from-maket/backgrounnds/bg-btn-3.jpg') ">
-              <span>Диетическое</span>
-            </a>
-            <div class="menu__wrap">
-              <div class="menu__content">
-                <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
-                    </p>
-              </div>
-            </div>
-          </li>
+  <!-- menu acordion -->
+  <section class="section menu">
+    <!-- <div class="container"> -->
+    <div class="title title--white title-menu">Меню</div>
+
+    <ul class="menu__list">
+      <li class="menu__item">
+        <a href="#" class="menu__trigger" style="background-image: url('IMG-from-maket/backgrounnds/bg-btn-1.jpg') ">
+          <span>Для мясоедов</span>
+        </a>
+        <div class="menu__wrap">
+          <div class="menu__content">
+            <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+              конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+              стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания,
+              как справедливо считает И.Гальперин, пространственно выбирает метр.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li class="menu__item">
+        <a href="#" class="menu__trigger" style="background-image: url('IMG-from-maket/backgrounnds/bg-btn-2.jpg') ">
+          <span>Вегатерианское</span>
+        </a>
+        <div class="menu__wrap">
+          <div class="menu__content">
+            <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+              конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+              стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания,
+              как справедливо считает И.Гальперин, пространственно выбирает метр.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li class="menu__item">
+        <a href="#" class="menu__trigger" style="background-image: url('IMG-from-maket/backgrounnds/bg-btn-3.jpg') ">
+          <span>Диетическое</span>
+        </a>
+        <div class="menu__wrap">
+          <div class="menu__content">
+            <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+              конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+              стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания,
+              как справедливо считает И.Гальперин, пространственно выбирает метр.
+            </p>
+          </div>
+        </div>
+      </li>
 
 
 
 
-        </ul>
+    </ul>
 
 
 
@@ -269,23 +411,6 @@
 
 
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -305,6 +430,8 @@
             </p>
           </div>
           <a href="#" class="btn btn--bg-black review__btn">подробнее</a>
+          <a href="#" class="btn btn--bg-black review__btn-hidden">читать отзыв</a>
+
         </div>
       </li>
       <li class="review__item" style="background:url(IMG-from-maket/review/item_2.jpg); background-size: cover">
@@ -319,6 +446,8 @@
             </p>
           </div>
           <a href="#" class="btn btn--bg-black review__btn">подробнее</a>
+          <a href="#" class="btn btn--bg-black review__btn-hidden">читать отзыв</a>
+
         </div>
       </li>
       <li class="review__item" style="background:url(IMG-from-maket/review/item_3.jpg); background-size: cover">
@@ -333,6 +462,8 @@
             </p>
           </div>
           <a href="#" class="btn btn--bg-black review__btn">подробнее</a>
+          <a href="#" class="btn btn--bg-black review__btn-hidden">читать отзыв</a>
+
         </div>
       </li>
       <li class="review__item" style="background:url(IMG-from-maket/review/item_4.jpg); background-size: cover">
@@ -347,6 +478,8 @@
             </p>
           </div>
           <a href="#" class="btn btn--bg-black review__btn">подробнее</a>
+          <a href="#" class="btn btn--bg-black review__btn-hidden">читать отзыв</a>
+
         </div>
       </li>
       <li class="review__item" style="background:url(IMG-from-maket/review/item_5.jpg); background-size: cover">
@@ -361,6 +494,8 @@
             </p>
           </div>
           <a href="#" class="btn btn--bg-black review__btn">подробнее</a>
+          <a href="#" class="btn btn--bg-black review__btn-hidden">читать отзыв</a>
+
         </div>
       </li>
       <li class="review__item" style="background:url(IMG-from-maket/review/item_6.jpg); background-size: cover">
@@ -375,6 +510,8 @@
             </p>
           </div>
           <a href="#" class="btn btn--bg-black review__btn">подробнее</a>
+          <a href="#" class="btn btn--bg-black review__btn-hidden">читать отзыв</a>
+
         </div>
       </li>
       <li class="review__item" style="background:url(IMG-from-maket/review/item_7.jpg); background-size: cover">
@@ -389,6 +526,8 @@
             </p>
           </div>
           <a href="#" class="btn btn--bg-black review__btn">подробнее</a>
+          <a href="#" class="btn btn--bg-black review__btn-hidden">читать отзыв</a>
+
         </div>
       </li>
       <li class="review__item" style="background:url(IMG-from-maket/review/item_8.jpg); background-size: cover">
@@ -403,6 +542,8 @@
             </p>
           </div>
           <a href="#" class="btn btn--bg-black review__btn">подробнее</a>
+                    <a href="#" class="btn btn--bg-black review__btn-hidden">читать отзыв</a>
+
         </div>
       </li>
 
@@ -414,7 +555,7 @@
 
   <section class="section order">
     <div class="container">
-      <h2 class="title title--orange title--orange-title">Закажите доставку</h2>
+      <h2 class="title title--yellow title--orange-title">Закажите доставку</h2>
       <form action="get" class="form">
         <div class="form__left">
           <div class="form__row">
@@ -503,7 +644,8 @@
   </section>
 
 
-   <section class="map"> <!-- вот тут я удалил section так как он предпологал что будет все такбо большо, а у меня картинка нет, если будет тру карта, то она может быть подразмер окна и тогда и вернуть нужно section -->
+  <section class="section map__section">
+    <!-- вот тут я удалил section так как он предпологал что будет все такбо большо, а у меня картинка нет, если будет тру карта, то она может быть подразмер окна и тогда и вернуть нужно section -->
     <div class="map">
       <img class="map-img" src="/IMG-from-maket/backgrounnds/map.jpg" alt="">
     </div>
@@ -515,9 +657,9 @@
               Санкт-Петербург, ул.Бабушкина, д.12/1, 15
             </span>
             <div class="tel__wrapper">
-              <svg class="phone-icon">
-                <use xlink:href="CSS/css/sprite.svg#phone"></use>
-              </svg>
+                <svg class="phone-icon" viewBox="0 0 11 11" enable-background="new 0 0 11 11">
+                  <use xlink:href="CSS/css/sprite.svg#phone"></use>
+                </svg>
               <a href="tel:+7 (812) 377-13-77" class="tel">
                 +7 (812) 377-13-77</a>
             </div>
@@ -525,6 +667,7 @@
           <div class="socials">
             <ul class="socials__list">
               <li class="socials__item">
+                <a href="vk.com" class="socials__litem_ink">
                 <a href="vk.com" class="socials__link">
                   <svg class="vk-icon" viewBox="0 0 126 72" enable-background="new 0 0 126 72">
                     <use xlink:href="CSS/css/sprite.svg#vk-ikon"></use>
@@ -532,21 +675,21 @@
                 </a>
               </li>
               <li class="socials__item">
-                <a href="vk.com" class="socials__link">
+                <a href="vk.com" class="socials__item_link">
                   <svg class="fb-icon" viewBox="0 0 36.711 36.711" enable-background="new 0 0 36.711 36.711">
                     <use xlink:href="CSS/css/sprite.svg#fb-ikon"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
-                <a href="vk.com" class="socials__link">
+                <a href="vk.com" class="socials__item_link">
                   <svg class="tw-icon" viewBox="0 0 36.663 36.664" enable-background="new 0 0 36.663 36.664">
                     <use xlink:href="CSS/css/sprite.svg#inst-ikon"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
-                <a href="vk.com" class="socials__link">
+                <a href="vk.com" class="socials__item_link">
                   <svg class="tw-icon" viewBox="0 0 37.453 31.21" enable-background="new 0 0 37.453 31.21">
                     <use xlink:href="CSS/css/sprite.svg#tw-ikon"></use>
                   </svg>
@@ -606,7 +749,7 @@
 
 
 
-
+  <script src="/CSS/js/script.js" ></script>
 </body>
 
 </html>

@@ -23,6 +23,7 @@
   padding: 0 2%;
   // width: 30%;
   // margin-right: 5%;
+  margin-bottom: rem(45px);
 
   @include smart {
     flex-direction: row;
@@ -36,7 +37,8 @@
 }
 
 .reason__banner {
-  margin-bottom: rem(33px);
+  // margin-bottom: rem(33px);
+
   
   .reason-img {
     width: rem(97px);
@@ -75,4 +77,12 @@ margin-right: rem(10px);
   @include smart {
     text-align: left;
   }
+}
+
+
+.whe__are_svg{
+  width: rem(100px);
+  height: rem(90px);
+
+
 }

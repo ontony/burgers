@@ -3,9 +3,12 @@
   font-size: rem(72px);
   line-height: 0.89;
   letter-spacing: normal;
-  text-align: center;
+  // text-align: center;
   &--orange {
     color: $orange;
+  }
+  &--yellow {
+    color: $yellow;
   }
   &--white {
     color: $white;

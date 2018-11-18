@@ -100,8 +100,11 @@ align-items: center;
     background: url('/IMG-from-maket/team_arrow.png') center center / cover no-repeat;
     height: rem(15px);
     width: rem(15px);
-    top: rem(10px);
-    right: rem(220px);
+    top: rem(5px);
+    left: rem(-30px);
+    transition: 0.5s;
+
+    
   }
 
 }
@@ -122,6 +125,10 @@ align-items: center;
 
 .member__avatar {
   margin-right: rem(20px);
+
+  @include smart {
+margin-right: 0;  
+}
 
   &>img {
     border-radius: 50%;
@@ -158,18 +165,14 @@ align-items: center;
   transition: height 0.5s ease-in-out;
 }
 
-.team__member {
-  display: block;
-  position: relative;
-  width: rem(200px);
-}
 
 
 
 
-.team__member-active+.team__hidden {
+
+.team__item-active .team__hidden {
   height: rem(120px);
-  padding-top: 17px;
+  // padding-top: 17px;
 
 
   @include tablet {
@@ -180,9 +183,10 @@ align-items: center;
 
 }
 
-.team__member-active {
+.team__item-active {
   .team__member::before {
     transform: rotate(-180deg);
+    transition: 0.5s;
 
   }
 }
