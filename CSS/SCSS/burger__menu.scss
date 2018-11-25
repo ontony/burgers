@@ -26,12 +26,15 @@
     flex-direction: column;
   }
 
-  .burger__contain {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+
+  .burger__menu {
+    background-image: linear-gradient(to top, #f9b43b, #eb8c38 48%, #f9b43b 74%);
+
+    // &-container {
+    //   flex-direction: row;
+    // }
+
+
   }
 
 
