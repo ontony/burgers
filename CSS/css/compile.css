@@ -562,6 +562,10 @@ body {
   background: url(../../IMG-from-maket/backgrounnds/menu_main.jpg) center center/cover no-repeat;
 }
 
+.how_we_work-page {
+  background: url(../../IMG-from-maket/backgrounnds/how_we_work.jpg) center center/cover no-repeat;
+}
+
 .header {
   width: 100%;
   padding-top: 0.75rem;
@@ -863,6 +867,7 @@ body {
 
 .review-page {
   background: #2f3234;
+  position: relative;
 }
 
 .review__list {
@@ -953,6 +958,43 @@ body {
   .review__btn-hidden {
     display: block;
   }
+}
+
+.review__mobile-clicked {
+  background: rgba(63, 66, 68, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #2f3234;
+}
+.review__mobile-clicked .review-popup {
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+.review__mobile-clicked .review__title-clicked {
+  font-family: "Gagalin";
+  font-size: 1.5rem;
+  line-height: 1.17;
+  margin-bottom: 25px;
+}
+.review__mobile-clicked .review__text-clicked {
+  font-family: "Ubuntu";
+  font-size: 0.875rem;
+  line-height: 1.71;
+  margin-bottom: 0.9375rem;
+}
+
+.how_we_work-title {
+  text-align: center;
 }
 
 .title {
@@ -1049,11 +1091,19 @@ body {
   height: 5.625rem;
 }
 
-.burger__slider_item {
-  display: none;
+.slider__wrap {
+  flex: 1;
+  overflow: hidden;
 }
-.burger__slider_item-active {
+
+.burger__slider_list {
   display: flex;
+  overflow: hidden;
+}
+
+.burger__slider_item {
+  display: flex;
+  flex: 1;
 }
 
 .burger__menu {
@@ -1185,6 +1235,17 @@ body {
   margin-bottom: 2.75rem;
 }
 
+@media (max-width: 768px) {
+  .form-title {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .form-title {
+    text-align: center;
+  }
+}
+
 .form__left,
 .form__right {
   flex: 1;
@@ -1251,24 +1312,26 @@ body {
 .radiobtns {
   margin-bottom: 0.4375rem;
 }
-
 .radiobtns__control {
   display: flex;
   justify-content: flex-start;
 }
-
+@media (max-width: 480px) {
+  .radiobtns__control {
+    display: flex;
+    justify-content: center;
+  }
+}
 .radiobtns__label {
   position: relative;
   display: flex;
   align-items: center;
 }
-
 .radiobtns__radio {
   position: absolute;
   top: 0;
   left: -624.9375rem;
 }
-
 .radiobtns__label-text {
   margin-right: 1.25rem;
 }
@@ -1319,24 +1382,35 @@ body {
 }
 
 .checkbox__text {
-  position: relative;
-  padding: 0 0 0 3.125rem;
   cursor: pointer;
+  display: flex;
+}
+@media (max-width: 480px) {
+  .checkbox__text {
+    justify-content: center;
+  }
 }
 
 .checkbox__text:before {
   content: "";
-  position: absolute;
+  display: block;
   top: -0.25rem;
   left: 0;
   width: 1rem;
   height: 1rem;
   background: #ffffff;
+  margin-right: 10px;
 }
 
 .checkbox input:checked + .checkbox__text:before {
   background: url(../../IMG-from-maket/checkmark_orange.png) center center/contain no-repeat;
   transition: 0.2s;
+}
+
+@media (max-width: 480px) {
+  .form__row_submit {
+    justify-content: center;
+  }
 }
 
 .submit__btn-clear {
@@ -1405,7 +1479,6 @@ body {
 }
 
 .team__member {
-  margin-left: 1.875rem;
   position: relative;
   font-family: "Gagalin";
   font-size: 0.875rem;
@@ -1417,7 +1490,7 @@ body {
   content: "";
   display: block;
   position: absolute;
-  background: url("IMG-from-maket/team_arrow.png") center center/cover no-repeat;
+  background: url("/IMG-from-maket/team_arrow.png") center center/cover no-repeat;
   height: 0.9375rem;
   width: 0.9375rem;
   top: 0.3125rem;
@@ -1584,7 +1657,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 3.75rem;
+  min-height: 3.75rem;
   background: url(../../IMG-from-maket/backgrounnds/footer_bg.jpg) center center/cover no-repeat;
   color: #ffffff;
   width: 100%;
@@ -1595,10 +1668,22 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 480px) {
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+}
 
 .contacts {
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 480px) {
+  .contacts {
+    margin-bottom: 20px;
+  }
 }
 .contacts .address {
   margin-bottom: 0.4375rem;
