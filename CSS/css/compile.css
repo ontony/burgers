@@ -1109,9 +1109,6 @@ body {
 .burger__menu {
   background-image: linear-gradient(to top, #f9b43b, #eb8c38 48%, #f9b43b 74%);
 }
-.burger__menu-container {
-  flex-direction: row;
-}
 
 .slider__content {
   display: flex;
