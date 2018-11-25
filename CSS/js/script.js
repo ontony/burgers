@@ -13,6 +13,8 @@ hamburger.addEventListener('click', function (e) {
 ////// Работа с командой и вытаскивание из нее
 
 
+
+
 const teamAct1 = document.querySelector('#teamAct1');
 const teamAct2 = document.querySelector('#teamAct2');
 const teamAct3 = document.querySelector('#three');
