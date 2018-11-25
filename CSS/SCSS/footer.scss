@@ -6,7 +6,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  min-height: rem(60px);
+  height: rem(60px);
   background: url(../../IMG-from-maket/backgrounnds/footer_bg.jpg) center center / cover no-repeat;
 
   color: $white;
@@ -19,12 +19,6 @@
     justify-content: space-between;
     align-items: center;
 
-    @include smart {
-      flex-direction: column;
-      text-align: center;
-      padding: 10px;
-  }
-
   }
 }
 
@@ -32,9 +26,6 @@
 .contacts {
   display: flex;
   flex-direction: column;
-  @include smart {
-margin-bottom: 20px;
-  }
 
   .address {
     margin-bottom: rem(7px);

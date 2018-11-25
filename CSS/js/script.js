@@ -1,8 +1,10 @@
+
+
 ///////навешивание активного класса на меню
 
 const hamburger = document.querySelector('#hamburger');
 
-hamburger.addEventListener('click', function (e) {
+hamburger.addEventListener('click', function(e){
   e.preventDefault();
   let header = document.querySelector('#header');
 
@@ -20,12 +22,12 @@ const teamAct4 = document.querySelector('#four');
 
 
 
-teamList.onclick = function (e) {
+teamList.onclick = function(e) {
   e.preventDefault();
   console.log(event.target.id);
 
   var target = event.target.id;
-
+  
   if (target == 'teamLink1') {
     teamAct1.classList.toggle('team__item-active');
     teamAct2.classList.remove('team__item-active');
@@ -51,6 +53,7 @@ teamList.onclick = function (e) {
     teamAct3.classList.remove('team__item-active');
   }
 };
+
 
 ////// Работа меню (горизонтальный аккордеон)
 
@@ -214,3 +217,4 @@ function fieldTest(o) {
 // }
 
 // о - обьект
+

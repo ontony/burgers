@@ -2,16 +2,6 @@
   margin-bottom: rem(44px);
 }
 
-.form-title {
-  @include tablet {
-    text-align: center;
-  }
-
-  @include smart {
-    text-align: center;
-  }
-}
-
 .form__left,
 .form__right {
   flex: 1;
@@ -90,39 +80,34 @@
 
 .radiobtns {
   margin-bottom: rem(7px);
-
-
-
-
-  &__control {
-    display: flex;
-    justify-content: flex-start;
-
-    @include smart {
-      display: flex;
-      justify-content: center;
-    }
-
-  }
-
-  &__label {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-
-
-  &__radio {
-    position: absolute;
-    top: 0;
-    left: rem(-9999px);
-
-  }
-
-  &__label-text {
-    margin-right: rem(20px);
-  }
 }
+
+
+
+.radiobtns__control {
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.radiobtns__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.radiobtns__radio {
+  position: absolute;
+  top: 0;
+  left: rem(-9999px);
+
+}
+
+.radiobtns__label-text {
+  margin-right: rem(20px);
+}
+
 
 .radiobtns__radio-fake {
   display: flex;
@@ -178,24 +163,19 @@
 }
 
 .checkbox__text {
+  position: relative;
+  padding: 0 0 0 rem(50px);
   cursor: pointer;
-  display: flex;
-
-  @include smart {
-    justify-content: center;
-  }
 }
 
 .checkbox__text:before {
   content: '';
-  display: block;
+  position: absolute;
   top: rem(-4px);
   left: 0;
   width: rem(16px);
   height: rem(16px);
   background: $white;
-  margin-right: 10px;
-
 
 }
 
@@ -206,11 +186,6 @@
 }
 
 
-.form__row_submit {
-  @include smart {
-    justify-content: center;
-  }
-}
 
 
 .submit__btn-clear {
