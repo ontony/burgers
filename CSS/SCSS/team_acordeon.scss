@@ -81,7 +81,6 @@ align-items: center;
 }
 
 .team__member {
-  margin-left: rem(30px);
   position: relative;
   font-family: 'Gagalin';
   font-size: rem(14px);
@@ -97,7 +96,7 @@ align-items: center;
     display: block;
     position: absolute;
 
-    background: url('IMG-from-maket/team_arrow.png') center center / cover no-repeat;
+    background: url('/IMG-from-maket/team_arrow.png') center center / cover no-repeat;
     height: rem(15px);
     width: rem(15px);
     top: rem(5px);

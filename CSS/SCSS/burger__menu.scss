@@ -1,163 +1,178 @@
-.burger__slider_item {
-  display: none;
+  .slider__wrap {
+    flex: 1;
+    overflow: hidden;
+  }
 
-  &-active {
+  .burger__slider_list {
     display: flex;
-  }
-}
-
-
-.burger__menu {
-  background-image: linear-gradient(to top, #f9b43b, #eb8c38 48%, #f9b43b 74%);
-
-  &-container {
-    flex-direction: row;
-  }
-}
-
-
-
-.slider__content {
-  display: flex;
-  align-items: center;
-
-
-  @include tablet {
-    flex-direction: column;
+    overflow: hidden;
   }
 
-  .burger__contain {
-    height: 100%;
+  .burger__slider_item {
+    display: flex;
+    flex: 1;
+  }
+
+
+
+
+
+
+
+
+
+
+  .burger__menu {
+    background-image: linear-gradient(to top, #f9b43b, #eb8c38 48%, #f9b43b 74%);
+
+    &-container {
+      flex-direction: row;
+    }
+  }
+
+
+
+  .slider__content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
+
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    .burger__contain {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+
+
+    .burger {
+      position: relative;
+      width: 50%;
+      // height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include tablet {
+        width: 100%;
+      }
+
+
+      &__contain {
+
+        .burger__btn {
+          display: flex;
+          width: rem(90px);
+          height: rem(90px);
+          background: #e35028;
+          border-radius: rem(5px);
+          align-items: center;
+          top: 0;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-decoration: none;
+
+
+
+
+          &_text {
+            color: $white;
+            text-decoration: none;
+            font-family: 'Gagalin';
+            font-size: 14px;
+            line-height: 2;
+          }
+        }
+      }
+
+      .burger__picture {
+        @include tablet {
+          width: 70%;
+        }
+
+      }
+
+    }
   }
 
+  .burger__btn,
+  .kkal-img {
+    position: absolute;
 
+  }
 
-  .burger {
-    position: relative;
+  .kkal-img {
+    bottom: 0;
+    left: 0;
+
+    @include tablet {
+      top: 0;
+      left: 90%;
+    }
+  }
+
+  .description {
     width: 50%;
-    // height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     @include tablet {
       width: 100%;
+      text-align: center;
     }
 
-
-    &__contain {
-
-      .burger__btn {
-        display: flex;
-        width: rem(90px);
-        height: rem(90px);
-        background: #e35028;
-        border-radius: rem(5px);
-        align-items: center;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-decoration: none;
-
-
-
-
-        &_text {
-          color: $white;
-          text-decoration: none;
-          font-family: 'Gagalin';
-          font-size: 14px;
-          line-height: 2;
-        }
-      }
+    .burger__menu-title {
+      margin-bottom: rem(55px);
     }
 
-    .burger__picture {
+    .burger__desc {
+      font-family: 'Ubuntu';
+      font-size: 14px;
+      line-height: 1.71;
+      color: $white;
+      margin-bottom: rem(36px);
+    }
+
+    .burger__price {
+      display: flex;
+      align-items: flex-end;
+
       @include tablet {
-        width: 70%;
+        justify-content: center;
       }
 
+
+      .burger__cost {
+        margin-right: rem(30px);
+      }
+
+      span {
+        margin-left: rem(-20px);
+        font-size: rem(28px);
+        letter-spacing: rem(-0.8px);
+      }
     }
 
   }
-}
 
-.burger__btn,
-.kkal-img {
-  position: absolute;
 
-}
 
-.kkal-img {
-  bottom: 0;
-  left: 0;
 
-  @include tablet {
-    top: 0;
-    left: 90%;
-  }
-}
 
-.description {
-  width: 50%;
+  .slider__arrow {
+    width: rem(27px);
 
-  @include tablet {
-    width: 100%;
-    text-align: center;
-  }
-
-  .burger__menu-title {
-    margin-bottom: rem(55px);
-  }
-
-  .burger__desc {
-    font-family: 'Ubuntu';
-    font-size: 14px;
-    line-height: 1.71;
-    color: $white;
-    margin-bottom: rem(36px);
-  }
-
-  .burger__price {
-    display: flex;
-    align-items: flex-end;
-
-    @include tablet {
-      justify-content: center;
+    &-left {
+      transform: rotate(90deg);
     }
 
-
-    .burger__cost {
-      margin-right: rem(30px);
-    }
-
-    span {
-      margin-left: rem(-20px);
-      font-size: rem(28px);
-      letter-spacing: rem(-0.8px);
+    &-right {
+      transform: rotate(-90deg);
     }
   }
-
-}
-
-
-
-
-
-.slider__arrow {
-  width: rem(27px);
-
-  &-left {
-    transform: rotate(90deg);
-  }
-
-  &-right {
-    transform: rotate(-90deg);
-  }
-}
