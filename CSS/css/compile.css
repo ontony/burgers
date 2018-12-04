@@ -998,6 +998,7 @@ body {
   border-radius: 5px;
   padding: 10px;
   position: relative;
+  max-width: 450px;
 }
 .review__mobile-clicked .review__title-clicked {
   font-family: "Gagalin";
@@ -1063,6 +1064,7 @@ body {
 
 .how_we_work-title {
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .title {
@@ -1628,7 +1630,7 @@ body {
   content: "";
   display: block;
   position: absolute;
-  background: url("/IMG-from-maket/team_arrow.png") center center/cover no-repeat;
+  background: url("../../IMG-from-maket/team_arrow.png") center center/cover no-repeat;
   height: 0.9375rem;
   width: 0.9375rem;
   top: 0.3125rem;

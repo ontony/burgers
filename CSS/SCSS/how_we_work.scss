@@ -1,3 +1,11 @@
 .how_we_work-title {
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.video {
+  @include tablet {
+    width: 400px;
+    height: 150px;
+  }
 }
