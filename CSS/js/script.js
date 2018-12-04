@@ -508,7 +508,7 @@ function initMap() {
   for (let index = 0; index < markers.length; index++) {
     maarker = new google.maps.Marker({
       position: markers[index],
-      icon: '../../IMG-from-maket/map-marker.svg',
+      icon: '/IMG-from-maket/map-marker.svg',
       map: map
     })
   }
