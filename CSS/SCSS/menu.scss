@@ -17,16 +17,23 @@
     top: 0;
     right: 0;
 
-    @include smart {
-      position: relative;
-    }
 
   }
+
 
   &__item {
     display: flex;
 
     &:hover {
+      .menu__trigger span {
+        color: $yellow;
+      }
+    }
+
+    &-active {
+
+
+
       .menu__trigger span {
         color: $yellow;
       }
@@ -40,12 +47,13 @@
         }
 
 
-        @include smart {
-          flex: 1;
-          z-index: 1;
-        }
+
       }
+
     }
+
+
+
   }
 
 
@@ -118,3 +126,22 @@
 
 
 }
+
+.menu__item-active {
+  @include smart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    .menu__wrap {
+      width: 100%;
+
+
+    }
+
+  }
+}
+
+.close-menu-stick {}

@@ -23,7 +23,7 @@
       flex-direction: column;
       text-align: center;
       padding: 10px;
-  }
+    }
 
   }
 }
@@ -32,8 +32,10 @@
 .contacts {
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
+
   @include smart {
-margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   .address {
@@ -55,23 +57,24 @@ margin-bottom: 20px;
   width: rem(12px);
   height: rem(12px);
   fill: $orange;
-  
+
 }
 
 .socials {
-height: 100%;
-  
+  height: 100%;
+
   &__list {
     display: flex;
-  
+
   }
 
   &__item {
     margin-right: rem(20px);
+
     &:last-child {
       margin-right: 0;
     }
-    
+
     &_link {
       color: $white;
       display: flex;
@@ -82,15 +85,19 @@ height: 100%;
 }
 
 
-.vk-icon, .tw-icon, .inst-icon, .fb-icon {
+.vk-icon,
+.tw-icon,
+.inst-icon,
+.fb-icon {
   width: rem(20px);
   height: rem(20px);
   fill: #ffffff;
   opacity: 0.3;
 }
 
-.vk-icon:hover, .tw-icon:hover, .inst-icon:hover, .fb-icon:hover {
+.vk-icon:hover,
+.tw-icon:hover,
+.inst-icon:hover,
+.fb-icon:hover {
   opacity: 1;
 }
-
-
